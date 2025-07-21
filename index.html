@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninja Robot - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gilroy:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="assets/logo.png" alt="Ninja Robot Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="index.html" data-translate="navHome">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html" data-translate="navAbout">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="development.html" data-translate="navDevelopment">Development Progress</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html" data-translate="navContact">Contact Us</a></li>
+                </ul>
+                <select id="language-selector" class="form-select w-auto">
+                    <option value="en">English</option>
+                    <option value="ja">日本語</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section text-center">
+        <div class="container">
+            <h1 data-translate="heroTitle">Welcome to the World of Ninja Robot</h1>
+            <p class="lead" data-translate="heroSubtitle">Building the Future of STEAM and AI Education</p>
+            <a href="development.html" class="btn btn-primary" data-translate="navDevelopment">See Our Progress</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="vision" class="container my-5 fade-in-section">
+            <h2 class="section-title" data-translate="visionTitle">Our Vision</h2>
+            <p class="vision-text" data-translate="visionText">Our vision is to empower the next generation of innovators by making AI and robotics accessible and engaging. We believe in learning by doing. The Ninja Robot is a platform for students to bring their ideas to life, transforming everyday objects into smart, AI-powered applications. We aim to cultivate a passion for technology and problem-solving, helping children develop the critical skills needed for the future.</p>
+        </section>
+
+        <section id="prototype" class="container my-5 fade-in-section">
+            <h2 class="section-title" data-translate="prototypeTitle">Latest Prototype</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="prototype-card">
+                        <img src="assets/Home/tire.gif" class="img-fluid" alt="NinjaTire Prototype">
+                        <div class="prototype-card-overlay">
+                            <h4 data-translate="ninjaTireTitle">NinjaTire</h4>
+                            <p data-translate="ninjaTireText">Meet NinjaTire, the all-terrain explorer. Equipped with rugged wheels and advanced AI navigation, it's designed to tackle any environment, making learning about robotics and mechanics an exciting adventure.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="prototype-card">
+                        <img src="assets/Home/feets.gif" class="img-fluid" alt="NinjaFeet Prototype">
+                        <div class="prototype-card-overlay">
+                            <h4 data-translate="ninjaFeetTitle">NinjaFeet</h4>
+                            <p data-translate="ninjaFeetText">Introducing NinjaFeet, the agile and precise walker. With its bipedal design, NinjaFeet excels at demonstrating complex movements and balance, offering a unique insight into the world of humanoid robotics and AI.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center p-3">
+        <p data-translate="footerText">&copy; 2025 Ninja Robot Project. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
