@@ -1,2 +1,0 @@
-# NinjaRobot
-Educational AI Robot
