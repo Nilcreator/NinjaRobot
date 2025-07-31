@@ -1,0 +1,172 @@
+/* ===== デザインシステム: デザイン・トークン (ニューモーフィズム・ライトテーマ) ===== */
+/* This section defines the design tokens for the website, including color palette, typography, and other design elements. */
+:root {
+    /* Color palette. */
+    --primary-blue: #0070f3;
+    --primary-green: #10b981;
+    --primary-purple: #8b5cf6;
+    
+    --background-main: #eef2f9;
+    --text-heading: #3b4d6b;
+    --text-body: #6e7f9a;
+    --text-subtle: #9babc5;
+    --text-light: #ffffff;
+    
+    --shadow-light: #ffffff;
+    --shadow-dark: #d1d9e6;
+    
+    /* Typography. */
+    --font-family-main: 'Inter', 'Noto Sans JP', sans-serif;
+    
+    /* Other design elements. */
+    --border-radius-soft: 1.25rem; /* 20px */
+    --border-radius-round: 50px;
+    --transition-main: all 0.3s ease-in-out;
+}
+
+/* ===== 基本スタイル ===== */
+/* This section defines the basic styles for the website. */
+body {
+    font-family: var(--font-family-main);
+    background-color: var(--background-main);
+    color: var(--text-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.community-page-background {
+    background-image: url('../assets/Community/HPOtto.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Background canvas for animations. */
+#background-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.2;
+}
+
+/* Typography hierarchy. */
+h1, h2, h3, h4 {
+    color: var(--text-heading);
+    font-weight: 800;
+}
+
+/* Active navigation link. */
+.nav-link.active {
+    color: var(--primary-blue);
+    font-weight: 700;
+}
+
+/* ===== ニューモーフィズム スタイル ===== */
+/* This section defines the neumorphism styles for the website. */
+.neumorphic-outset {
+    border-radius: var(--border-radius-soft);
+    background: var(--background-main);
+    box-shadow: 8px 8px 16px var(--shadow-dark), -8px -8px 16px var(--shadow-light);
+    transition: var(--transition-main);
+}
+.neumorphic-outset:hover {
+     box-shadow: 4px 4px 8px var(--shadow-dark), -4px -4px 8px var(--shadow-light);
+}
+
+.neumorphic-inset {
+    border-radius: var(--border-radius-soft);
+    background: var(--background-main);
+    box-shadow: inset 8px 8px 16px var(--shadow-dark), inset -8px -8px 16px var(--shadow-light);
+}
+
+.neumorphic-button {
+    border-radius: var(--border-radius-round);
+    background: var(--background-main);
+    box-shadow: 6px 6px 12px var(--shadow-dark), -6px -6px 12px var(--shadow-light);
+    transition: var(--transition-main);
+    color: var(--text-body);
+    font-weight: 600;
+}
+.neumorphic-button:hover {
+    color: var(--primary-blue);
+    box-shadow: 4px 4px 8px var(--shadow-dark), -4px -4px 8px var(--shadow-light);
+}
+.neumorphic-button:active, .neumorphic-button.active {
+     box-shadow: inset 4px 4px 8px var(--shadow-dark), inset -4px -4px 8px var(--shadow-light);
+}
+
+/* ===== 作成ページのタイムラインデザイン ===== */
+/* This section defines the timeline design for the create page. */
+.timeline-block {
+    position: relative;
+    padding: 1.5rem;
+    border-radius: var(--border-radius-soft);
+    overflow: hidden;
+    transition: var(--transition-main);
+}
+.timeline-block:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+.timeline-number {
+    position: absolute;
+    top: -0.75rem;
+    left: 0.25rem;
+    font-size: 6rem; /* 96px */
+    font-weight: 900;
+    line-height: 1;
+    opacity: 0.08;
+    z-index: 0;
+    user-select: none;
+}
+.timeline-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Custom scrollbar. */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--background-main);
+}
+::-webkit-scrollbar-thumb {
+    background: #d1d9e6;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #b8c1d1;
+}
+
+.prototype-card .description {
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.prototype-card:hover .description {
+    transform: translateY(0);
+}
+
+/* ===== レスポンシブデザイン ===== */
+/* This section defines the responsive design for the website. */
+@media (max-width: 767px) {
+    #lang-switcher-btn {
+        padding: 0;
+        width: 3rem; /* 48px */
+        height: 3rem; /* 48px */
+        justify-content: center;
+    }
+
+    #lang-switcher-btn svg {
+        margin-right: 0;
+    }
+
+    #current-lang-text {
+        display: none;
+    }
+}
